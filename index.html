@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Staking Site</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MORPH STAKING - PROTEIN STAKE</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        width: 300px;
+        height: 100px;
+        background-color: purple;
+        border-radius: 50px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .logo {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        display: block;
+      }
+
+      .timer {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .ticker {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to the Staking Site</h1>
-    <p>Enter the amount of tokens you want to stake:</p>
-    <input type="number" id="amount" name="amount"><br><br>
-    <p>Enter the lockup period (in days):</p>
-    <input type="number" id="lockup" name="lockup"><br><br>
-    <button onclick="stake()">Stake</button>
-    <button onclick="unstake()">Unstake</button>
-    <button onclick="claimReward()">Claim Reward</button>
-    <p id="status"></p>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.0/web3.min.js"></script>
-    <script type="text/javascript">
-      const CONTRACT_ADDRESS = "0x1234567890123456789012345678901234567890";
-      const ABI = [
-        {
-          "inputs": [
-            {
-              "internalType": "uint256",
-              "name": "amount",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "lockupPeriod",
-              "type": "uint256"
-            }
-          ],
-          "name": "stake",
-          "outputs": [],
-          "stateMutability": "payable",
-          "type": "function"
-        },
-        {
-          "inputs": [],
-          "name": "claimReward",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "inputs": [
-            {
-              "internalType": "uint256",
-              "name": "amount",
-              "type": "uint256"
-            }
-          ],
-          "name": "unstake",
-          "outputs": [],
-          "stateMutability": "nonpayable",
-          "type": "function"
-        }
-      ];
-      const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
-      const contract = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
-
-      async function stake() {
-        const amount = document.getElementById("amount").value;
-        const lockup = document.getElementById("lockup").value;
-        const accounts = await web3.eth.getAccounts();
-        const result = await contract.methods.stake(amount, lockup).send({ from: accounts[0], value: web3.utils.toWei(amount.toString(), "ether") });
-        console.log(result);
-        document.getElementById("status").innerHTML = "Staked " + amount + " tokens with a lockup period of " + lockup + " days.";
-      }
-
-      async function unstake() {
-        const amount = document.getElementById("amount").value;
-        const accounts = await web3.eth.getAccounts();
-        const result = await contract.methods.unstake(amount).send({ from: accounts[0] });
-        console.log(result);
-        document.getElementById("status").innerHTML = "Unstaked " + amount + " tokens.";
-      }
-
-      async function claimReward() {
-        const accounts = await web3.eth.getAccounts();
-        const result = await contract.methods.claimReward().send({ from: accounts[0] });
-        console.log(result);
-        document.getElementById("status").innerHTML = "Reward claimed.";
-      }
-    </script>
+    <img class="logo" src="https://example.com/logo.png" alt="MORPH STAKING logo" />
+    <h1>MORPH STAKING</h1>
+    <h2>PROTEIN STAKE</h2>
+    <div class="container">
+      <div class="box">
+        <div class="timer">12 days, 4 hours, 23 minutes</div>
+      </div>
+      <div class="box">
+        <div class="ticker">0.025 MORPH earned</div>
+      </div>
+    </div>
   </body>
 </html>
