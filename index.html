@@ -1,77 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MORPH STAKING - PROTEIN STAKE</title>
-    <style>
-      body {
-        background-color: black;
-        color: white;
-      }
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Morph Staking</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: Arial, sans-serif;
+		}
 
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+		.logo {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-image: url(https://drive.google.com/file/d/1kF-H5J07ouYbDk0AQDxyZZgC5LisOovj/view?usp=drivesdk);
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
 
-      .box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        width: 300px;
-        height: 100px;
-        background-color: purple;
-        border-radius: 50px;
-      }
+		.heading {
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			background-image: url('https://via.placeholder.com/150');
+			background-repeat: no-repeat;
+			background-size: contain;
+			padding-left: 70px;
+		}
 
-      h1 {
-        margin: 0;
-        font-size: 50px;
-        font-weight: bold;
-        text-align: center;
-      }
+		.sub-heading {
+			font-size: 24px;
+			margin-top: 0;
+			font-style: italic;
+		}
 
-      h2 {
-        margin: 0;
-        font-size: 25px;
-        font-weight: bold;
-        text-align: center;
-      }
+		.box {
+			background-color: purple;
+			border-radius: 30px;
+			padding: 20px;
+			display: inline-block;
+			margin-right: 20px;
+		}
 
-      .logo {
-        width: 200px;
-        height: 200px;
-        margin: 20px auto;
-        display: block;
-      }
+		.timer {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
 
-      .timer {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      .ticker {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <img class="logo" src="https://example.com/logo.png" alt="MORPH STAKING logo" />
-    <h1>MORPH STAKING</h1>
-    <h2>PROTEIN STAKE</h2>
-    <div class="container">
-      <div class="box">
-        <div class="timer">12 days, 4 hours, 23 minutes</div>
-      </div>
-      <div class="box">
-        <div class="ticker">0.025 MORPH earned</div>
-      </div>
-    </div>
-  </body>
+		.ticker {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="heading">MORPH STAKING</div>
+	</div>
+	<div class="sub-heading">PROTEIN STAKE</div>
+	<div class="box">
+		<div class="timer">Your tokens have been staked for:</div>
+		<div class="ticker">You are earning 3 MORPH per day</div>
+	</div>
+</body>
 </html>
